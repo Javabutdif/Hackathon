@@ -3,13 +3,9 @@ const User = require("./user_schema");
 
 const Schema = mongoose.Schema;
 
-const orgSchema = new Schema({
-	orgName: {
+const eventSchema = new Schema({
+	eventName: {
 		type: String,
-	},
-	orgLeader: {
-		type: String,
-		required: true,
 	},
 	description: {
 		type: String,
@@ -24,6 +20,6 @@ const orgSchema = new Schema({
 	},
 });
 
-const Org = mongoose.model("Org", orgSchema, "org");
+const Event = mongoose.model("Event", eventSchema, "event");
 
-module.exports = Org;
+module.exports = Event;

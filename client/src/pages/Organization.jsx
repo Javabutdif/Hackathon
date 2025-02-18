@@ -44,7 +44,7 @@ function Organization() {
 			</div>
 			{viewModal && (
 				<>
-					<CreateModal onClose={handleHideModal} />
+					<CreateModal type="Organization" onClose={handleHideModal} />
 				</>
 			)}
 		</div>

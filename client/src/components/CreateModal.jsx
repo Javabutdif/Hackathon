@@ -1,18 +1,26 @@
 import React, { useState } from "react";
-import { requestOrganization } from "../../api/api_user";
+import { requestOrganization, createEvent } from "../../api/api_user";
 import { getInformationData } from "../data_management/data_information";
 
-const CreateModal = ({ onClose, onSave }) => {
+const CreateModal = ({ onClose, type }) => {
 	const [organizationName, setOrganizationName] = useState("");
+	const [eventName, setEventName] = useState("");
 	const [description, setDescription] = useState("");
 	const user = getInformationData();
 	const handleSave = async () => {
 		const formData = new FormData();
-		formData.append("organizationName", organizationName);
+		formData.append(
+			type === "Organization" ? "organizationName" : "eventName",
+			type === "Organization" ? organizationName : eventName
+		);
 		formData.append("description", description);
 		formData.append("name", user);
 
-		if (await requestOrganization(formData)) {
+		if (
+			type === "organization"
+				? await requestOrganization(formData)
+				: await createEvent(formData)
+		) {
 			onClose();
 		}
 	};
@@ -20,16 +28,20 @@ const CreateModal = ({ onClose, onSave }) => {
 	return (
 		<div className="fixed inset-0 flex items-center justify-center bg-opacity-30 backdrop-blur-sm">
 			<div className="bg-white p-6 rounded-lg shadow-lg w-96">
-				<h2 className="text-xl font-semibold mb-4">Create Organization</h2>
+				<h2 className="text-xl font-semibold mb-4">Create {type}</h2>
 				<div className="mb-4">
 					<label className="block text-sm font-medium text-gray-700">
-						Organization Name:
+						{type} Name:
 					</label>
 					<input
 						type="text"
 						className="w-full mt-1 p-2 border rounded-md focus:ring focus:ring-blue-300"
-						value={organizationName}
-						onChange={(e) => setOrganizationName(e.target.value)}
+						value={type === "organizationName" ? organizationName : eventName}
+						onChange={(e) =>
+							type === "organizationName"
+								? setOrganizationName(e.target.value)
+								: setEventName(e.target.value)
+						}
 					/>
 				</div>
 				<div className="mb-4">
