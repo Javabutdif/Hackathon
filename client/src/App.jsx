@@ -17,7 +17,7 @@ import Header from "./components/Header";
 import Main from "./components/Main";
 import Footer from "./components/Footer";
 import { ErrorMessage } from "./components/ErrorMessages";
-import { useLocation } from 'react-router-dom'
+
 function App() {
   useEffect(() => {
     document.title = APP_NAME;
@@ -44,8 +44,7 @@ function App() {
     );
   };
 
-  const location = useLocation();
-  console.log(location);
+ 
   return (
     <div data-theme="lemonade" className="dark min-h-screen font-poppins text-sm text-primary-content">
       <BrowserRouter>
