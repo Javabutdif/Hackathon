@@ -60,7 +60,7 @@ function Login() {
 				</form>
 				<p className="text-center text-sm mt-4">
 					New user?{" "}
-					<a className="text-primary underline" href="/register">
+					<a className="hover:underline" href="/register">
 						Register
 					</a>{" "}
 					here!
