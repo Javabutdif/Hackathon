@@ -11,8 +11,7 @@ router.post("/", async (req, res) => {
 		password,
 		email,
 		address,
-		organization,
-		role,
+		
 	} = req.body;
 
 	try {
@@ -26,7 +25,7 @@ router.post("/", async (req, res) => {
 			email,
 			address,
 			organization,
-			role,
+			role: "Volunteer",
 		});
 		console.log(newUser);
 		await newUser.save();

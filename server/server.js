@@ -1,7 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const app = express();
-const port = 3000;
+const port = 5000;
 const cors = require("cors");
 const bodyParser = require("body-parser");
 const register_route = require("./routes/register_routes");
@@ -11,7 +11,7 @@ app.use(express.json());
 app.use(bodyParser.json());
 app.use(
 	cors({
-		origin: process.env.CORS,
+		origin: "http://localhost:5173",
 		methods: ["GET", "POST", "PUT", "DELETE"],
 		allowedHeaders: ["Content-Type", "Authorization"],
 	})
