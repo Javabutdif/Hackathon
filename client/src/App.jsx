@@ -45,9 +45,12 @@ function App() {
   };
 
   return (
-    <div data-theme="lemonade" className="dark min-h-screen font-poppins text-sm text-primary-content">
+    <div
+      data-theme="lemonade"
+      className="dark min-h-screen font-poppins text-sm text-primary-content"
+    >
       <BrowserRouter>
-        <Header/>
+        <Header />
         <div className="w-full">
           {errorMessages.map((msg) => (
             <ErrorMessage
@@ -61,15 +64,15 @@ function App() {
         </div>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/logout" element={<Logout />} />
+          <Route path="/register" element={<Register />} />
           <Route
             path="*"
             element={
               <Main>
                 <Routes>
                   <Route path="/privacy" element={<Privacy />} />
-                  <Route path="/login" element={<Login />} />
-                  <Route path="/logout" element={<Logout />} />
-                  <Route path="/register" element={<Register />} />
                   {/* Protected Routes */}
                   <Route
                     path="/dashboard"

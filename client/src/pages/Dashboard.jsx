@@ -2,7 +2,7 @@ import { Outlet, Link } from 'react-router-dom';
 import { getInformationData } from "../data_management/data_information.js";
 
 const data = getInformationData();
-console.log("DashboardData: " + data.name);
+//console.log("DashboardData: " + data.name === undefined ? "" : data.name);
 function Dashboard() {
   return (
     <div className="container mx-auto p-4">
