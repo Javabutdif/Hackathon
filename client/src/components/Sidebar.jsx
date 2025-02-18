@@ -5,7 +5,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
         <h2 className="text-2xl font-bold mb-4">Dashboard</h2>
         <ul className="menu overflow-y-auto max-h-[calc(100vh-4rem)]"> {/* Keeps it scrollable with max-height */}
           <li><a href="#" className="active">Home</a></li>
-          <li><Link to="/organizations">Organizations</Link></li>
+          <li><Link to="/organization">Organizations</Link></li>
           <li><a href="#">Settings</a></li>
           <li><a href="#">Messages</a></li>
           <li><a href="#">Logout</a></li>

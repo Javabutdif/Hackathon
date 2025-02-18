@@ -3,10 +3,10 @@ import logo from "../assets/images/logo.png";
 import { APP_NAME, MENU_ITEMS as menu_items, PROTECTED_MENU_ITEMS as protected_menu_items } from "../constants/constants";
 
 function Header({ authd = true }) {
-  const icon_style = "_svg]:w-3 [&_svg]:h-3 [&_svg]:fill-current";
+  const icon_style = "[&_svg]:w-3 [&_svg]:h-3 [&_svg]:fill-current";
 
   return (
-    <header className="navbar bg-primary text-primary-content shadow-sm text-sm">
+    <header className="navbar bg-primary text-neutral-100 shadow-xl text-sm">
       <div className="flex-1 mr-10">
         <a className="btn btn-ghost p-2 text-center " href="/">
           <img src={logo} className="w-8" alt="icon" />
