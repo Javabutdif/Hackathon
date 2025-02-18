@@ -31,6 +31,7 @@ router.post("/", async (req, res) => {
 				: {
 						name: `${user1.firstname}  ${user1.lastname}`,
 						email: user1.email,
+						
 				  };
 
 		return res.status(200).json({

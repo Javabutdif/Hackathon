@@ -6,6 +6,7 @@ const cors = require("cors");
 const bodyParser = require("body-parser");
 const register_route = require("./routes/register_routes");
 const login_route = require("./routes/login_route");
+const user_route = require("./routes/user_routes");
 
 //MiddleWare
 app.use(express.json());
@@ -31,6 +32,7 @@ mongoose
 //Api endpoint
 app.use("/api/register", register_route);
 app.use("/api/login", login_route);
+app.use("/api", user_route);
 //Start server
 app.listen(port, () => {
 	console.log(`Server running on http://localhost:${port}`);
