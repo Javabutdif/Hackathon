@@ -45,7 +45,7 @@ function App() {
   };
 
   return (
-    <div data-theme="forest" className="dark min-h-screen font-poppins text-sm text-slate-300">
+    <div data-theme="retro" className="dark min-h-screen font-poppins text-sm text-slate-300">
       <BrowserRouter>
         <Header />
         <div className="w-full">

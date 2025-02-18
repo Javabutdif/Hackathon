@@ -2,7 +2,7 @@
 @import "tailwindcss";
 
 @plugin "daisyui" {
-    themes: dark --default, forest, cupcake;
+    themes: light --default, forest, cupcake, retro;
 }
 
 @custom-variant dark (&:where(.dark, .dark *));
@@ -13,7 +13,7 @@
 }
 
 @utility a-default {
-    @apply hover:underline hover:text-blue-500 italic;
+    @apply hover:underline hover:text-gray-300 italic;
 }
 
 @utility ul-default  {

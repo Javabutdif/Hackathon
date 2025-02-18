@@ -36,14 +36,14 @@ function Form({
               <input
                 type={element.type || "text"}
                 placeholder={`${element.placeHolder}`}
-                className={`input input-primary w-full mb-2 ${element.className}`}
+                className={`input input-primary text-white placeholder:text-neutral-700 w-full mb-2 ${element.className}`}
                 {...element.attribs}
               />
             </div>
           );
         })}
       </fieldset>
-      <button type="submit" className="btn btn-primary w-full mt-1">
+      <button type="submit" className="btn btn-neutral w-full mt-1">
         {submitLabel}
       </button>
     </form>

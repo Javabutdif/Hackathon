@@ -15,7 +15,7 @@ const artwork_urls = [
 function Dashboard() {
   return (
     <div>
-      <div className="card bg-neutral-900 w-full shadow-xl">
+      <div className="card bg-neutral text-neutral-content w-full shadow-xl">
         <figure className="md:py-12">
           <img src={avatar} alt="Avatar" />
         </figure>
@@ -28,18 +28,18 @@ function Dashboard() {
         </div>
       </div>
       <br />
-      <div className="card bg-neutral-900 w-full shadow-xl">
+      <div className="card bg-neutral text-neutral-content w-full shadow-xl">
         <div className="card-body">
           <h2>About {user.firstname},</h2>
-          <hr className="border-neutral-700" />
+          <hr className="border-neutral-content" />
           <p>{user.profile_description}</p>
         </div>
       </div>
       <br />
-      <div className="card bg-neutral-900 w-full shadow-xl">
+      <div className="card bg-neutral text-neutral-content w-full shadow-xl">
         <div className="card-body">
           <h2>Artworks</h2>
-          <hr className="border-neutral-700" />
+          <hr className="border-neutral-content" />
         {
           USER_ARTWORKS.map( (artwork, index) => (
           <div className="card w-full border-none md:card-side">

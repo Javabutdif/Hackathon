@@ -1,4 +1,4 @@
-export const APP_NAME = "Artify";
+export const APP_NAME = "Pundok";
 
 export const USER_DETAILS = [
   {

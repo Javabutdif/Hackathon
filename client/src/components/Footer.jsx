@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 function Footer() {
   return (
-    <footer className="footer sm:footer-horizontal bg-base-300 text-neutral-content items-center p-8">
+    <footer className="footer sm:footer-horizontal bg-primary text-primary-content items-center p-8">
       <aside className="grid-flow-col items-center">
         <svg
           width="30"

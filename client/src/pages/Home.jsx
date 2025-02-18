@@ -2,7 +2,7 @@ import { APP_NAME } from '../constants/constants';
 
 function Home() {
   return (
-    <div className="hero min-h-screen w-full">
+    <div className="hero min-h-screen text-primary-content w-full">
       <div className="hero-content text-center">
         <div className="max-w-md">
           <h1 className="">Welcome to { APP_NAME }!</h1>

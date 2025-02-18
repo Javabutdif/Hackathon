@@ -36,7 +36,7 @@ function Header({ authd = true }) {
             </svg>
           </button>
           <ul
-            className="dropdown-content menu w-54 p-4 mt-4 rounded-box bg-primary text-primary-content shadow-sm"
+            className="dropdown-content menu w-54 p-4 mt-4 rounded-box bg-neutral-800 text-neutral-content shadow-sm"
             tabIndex={0}
           >
             {authd === false
