@@ -5,18 +5,35 @@ const Schema = mongoose.Schema;
 const userSchema = new Schema({
 	username: {
 		type: String,
-		unique: true,
 	},
 	password: {
 		type: String,
 		required: true,
 	},
-	name: {
+	firstname: {
 		type: String,
 		required: true,
 	},
+	lastname: {
+		type: String,
+		required: true,
+	},
+	email: {
+		type: String,
+		required: true,
+	},
+	address: {
+		type: String,
+		required: true,
+	},
+	organization: {
+		type: String,
+	},
+	role: {
+		type: String,
+	},
 });
 
-const User = mongoose.model("User", adminSchema, "user");
+const User = mongoose.model("User", userSchema, "user");
 
 module.exports = User;

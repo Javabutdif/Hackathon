@@ -4,7 +4,7 @@ const app = express();
 const port = 3000;
 const cors = require("cors");
 const bodyParser = require("body-parser");
-const { mongodb_uri } = require("./environment_variables/env");
+const register_route = require("./routes/register_routes");
 
 //MiddleWare
 app.use(express.json());
@@ -28,7 +28,7 @@ mongoose
 	.catch((err) => console.log(err));
 
 //Api endpoint
-
+app.use("/api/register", register_route);
 //Start server
 app.listen(port, () => {
 	console.log(`Server running on http://localhost:${port}`);
