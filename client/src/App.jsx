@@ -12,6 +12,7 @@ import Organization from "./pages/Organization";
 import Events from "./pages/Events";
 import Settings from "./pages/Settings";
 import Privacy from "./pages/Privacy";
+import MyActivities from "./pages/MyActivities";
 // Components
 import Header from "./components/Header";
 import Main from "./components/Main";
@@ -82,6 +83,7 @@ function App() {
                   <Route path="/volunteer" element={<Volunteer />} />
                   <Route path="/organization" element={<Organization />} />
                   <Route path="/events" element={<Events />} />
+                  <Route path="/activity" element={<MyActivities />} />
                   <Route path="/settings" element={<Settings />} />
                 </Routes>
               </Main>

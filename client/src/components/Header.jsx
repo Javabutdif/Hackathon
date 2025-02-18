@@ -40,7 +40,8 @@ function Header({ authd = true }) {
             tabIndex={0}
           >
             {authd === false
-              ? menu_items.map((item, index) => (
+              ?
+               menu_items.map((item, index) => (
                   <li key={index}>
                     <Link to={item.nav_link} className={`${icon_style}`}>
                       {item.icon}
