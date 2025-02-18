@@ -2,6 +2,7 @@
 const express = require("express");
 const User = require("../model/user_schema");
 const Org = require("../model/organization_schema");
+const Event = require("../model/event_schema");
 const router = express.Router();
 
 router.post("/organization/request", async (req, res) => {
@@ -21,6 +22,23 @@ router.post("/organization/request", async (req, res) => {
 	}
 });
 
+router.post("/event/create", async (req, res) => {
+	const { eventName, description } = req.body;
+
+	try {
+		const event = new Event({
+			eventName,
+
+			description,
+			date: new Date(),
+		});
+		await event.save();
+		res.status(200).json({ message: "Event Created successfully" });
+	} catch (error) {
+		console.error(error);
+	}
+});
+
 router.get("/organization/get-all", async (req, res) => {
 	try {
 		const organizations = await Org.find();
@@ -29,5 +47,15 @@ router.get("/organization/get-all", async (req, res) => {
 		console.error(error);
 	}
 });
+
+router.get("/event/get-all", async (req, res) => {
+	try {
+		const events = await Event.find();
+		res.status(200).json({ data: events });
+	} catch (error) {
+		console.error(error);
+	}
+});
+
 
 module.exports = router;
