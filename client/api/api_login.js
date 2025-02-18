@@ -12,7 +12,7 @@ export const login = async (data) => {
 				},
 			}
 		);
-		alert(response.data.message);
+		alert(response.data.data.name);
 		return response.status === 200 ? response.data.data : [];
 	} catch (error) {
 		if (error.response && error.response.data) {
