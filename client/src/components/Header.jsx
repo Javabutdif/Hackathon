@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import logo from "../assets/images/logo-2.png";
+import logo from "../assets/images/logo.png";
 import { APP_NAME, MENU_ITEMS as menu_items, PROTECTED_MENU_ITEMS as protected_menu_items } from "../constants/constants";
 
 function Header({ authd = true }) {
