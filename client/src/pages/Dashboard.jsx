@@ -1,4 +1,6 @@
 import avatar from "../assets/images/avatar/avatar.jpg";
+import { Outlet, Link } from 'react-router-dom';
+
 import artwork1 from '../assets/images/artworks/artwork1.jpg';
 import artwork2 from '../assets/images/artworks/artwork2.jpg';
 import artwork3 from '../assets/images/artworks/artwork3.jpg';
@@ -21,46 +23,19 @@ const data = getInformationData();
 console.log("DashboardData: " + data.name);
 function Dashboard() {
   return (
-    <div>
-      <div className="card bg-neutral text-neutral-content w-full shadow-xl">
-        <figure className="md:py-12">
-          <img src={avatar} alt="Avatar" />
-        </figure>
-        <div className="card-body text-center">
-          <h1 className="text-center">{user.firstname} {user.lastname}</h1>
-          <h4 className="!font-normal">{user.profession.join(" • ")}</h4>
-          <h6 className="!font-normal">from {user.region}, {user.country}</h6>
-          <h6 className="!font-normal mt-2">Following: {user.following_count}, Followers: {user.followers_count}, Friends: {user.friends}</h6>
-          <h6 className="italic">@{user.username}</h6>
-        </div>
+    <div className="container mx-auto p-4">
+      <h1 className="text-2xl font-bold mb-4">Volunteer Dashboard</h1>
+      <div className="tabs">
+        <Link to="/volunteer/overview" className="tab tab-bordered">Overview</Link>
+        <Link to="/volunteer/organizations" className="tab tab-bordered">My Organizations</Link>
+        <Link to="/volunteer/events" className="tab tab-bordered">My Events</Link>
+        <Link to="/volunteer/hours" className="tab tab-bordered">Volunteer Hours</Link>
+        <Link to="/volunteer/profile" className="tab tab-bordered">Profile</Link>
+        <Link to="/volunteer/notifications" className="tab tab-bordered">Notifications</Link>
+        <Link to="/volunteer/settings" className="tab tab-bordered">Settings</Link>
       </div>
-      <br />
-      <div className="card bg-neutral text-neutral-content w-full shadow-xl">
-        <div className="card-body">
-          <h2>About {user.firstname},</h2>
-          <hr className="border-neutral-content" />
-          <p>{user.profile_description}</p>
-        </div>
-      </div>
-      <br />
-      <div className="card bg-neutral text-neutral-content w-full shadow-xl">
-        <div className="card-body">
-          <h2>Artworks</h2>
-          <hr className="border-neutral-content" />
-        {
-          USER_ARTWORKS.map( (artwork, index) => (
-          <div className="card w-full border-none md:card-side">
-          <figure className="md:w-1/2 md:h-[20vh]">
-            <img className="w-full" src={artwork_urls[index]} alt="artwork" />
-          </figure>
-            <div className="card-body p-2 mb-2 text-center !font-normal">
-              <h2>{artwork.title}</h2>
-              <p className="!indent-0">{artwork.genre} • {artwork.type}</p>
-            </div>
-          </div>
-          ))
-        }
-        </div>
+      <div className="mt-4">
+        <Outlet />
       </div>
     </div>
   );
