@@ -49,15 +49,6 @@ function Organization() {
           </div>
         ))}
       </div>
-<<<<<<< HEAD
-      {viewModal && (
-        <>
-          <CreateModal onClose={handleHideModal} />
-        </>
-      )}
-    </div>
-  );
-=======
 			{viewModal && (
 				<>
 					<CreateModal type="Organization" onClose={handleHideModal} />
@@ -65,7 +56,6 @@ function Organization() {
 			)}
 		</div>
 	);
->>>>>>> 63ac49ab06fd0d36e3a079258cc9900fb982723d
 }
 
 export default Organization;
