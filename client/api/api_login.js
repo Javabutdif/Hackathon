@@ -1,5 +1,6 @@
 import { server_connection } from "./connection";
 import axios from "axios";
+import { setInformationData } from "../src/data_management/data_information";
 
 export const login = async (data) => {
 	try {
@@ -12,8 +13,9 @@ export const login = async (data) => {
 				},
 			}
 		);
-		alert(response.data.data.name);
-		return response.status === 200 ? response.data.data : [];
+		setInformationData(response.data.data, response.data.role);
+		alert(response.data.message);
+		return response.status === 200 ? true: false;
 	} catch (error) {
 		if (error.response && error.response.data) {
 			return false;

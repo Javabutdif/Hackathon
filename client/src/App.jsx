@@ -47,9 +47,9 @@ function App() {
   const location = useLocation();
   console.log(location);
   return (
-    <div data-theme="retro" className="dark min-h-screen font-poppins text-sm text-slate-300">
+    <div data-theme="lemonade" className="dark min-h-screen font-poppins text-sm text-primary-content">
       <BrowserRouter>
-        <Header />
+        <Header/>
         <div className="w-full">
           {errorMessages.map((msg) => (
             <ErrorMessage
@@ -61,24 +61,31 @@ function App() {
             />
           ))}
         </div>
-        <Main>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/privacy" element={<Privacy />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/logout" element={<Logout />} />
-            <Route path="/register" element={<Register />} />
-            {/* Protected Routes */}
-            <Route
-              path="/dashboard"
-              element={<Dashboard addErrorMessage={addErrorMessage} />}
-            />
-            <Route path="/volunteer" element={<Volunteer />} />
-            <Route path="/organization" element={<Organization />} />
-            <Route path="/events" element={<Events />} />
-            <Route path="/settings" element={<Settings />} />
-          </Routes>
-        </Main>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route
+            path="*"
+            element={
+              <Main>
+                <Routes>
+                  <Route path="/privacy" element={<Privacy />} />
+                  <Route path="/login" element={<Login />} />
+                  <Route path="/logout" element={<Logout />} />
+                  <Route path="/register" element={<Register />} />
+                  {/* Protected Routes */}
+                  <Route
+                    path="/dashboard"
+                    element={<Dashboard addErrorMessage={addErrorMessage} />}
+                  />
+                  <Route path="/volunteer" element={<Volunteer />} />
+                  <Route path="/organization" element={<Organization />} />
+                  <Route path="/events" element={<Events />} />
+                  <Route path="/settings" element={<Settings />} />
+                </Routes>
+              </Main>
+            }
+          />
+        </Routes>
         <Footer />
       </BrowserRouter>
     </div>

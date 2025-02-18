@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { APP_NAME } from "../constants/constants";
-import Form from "../components/form";
 import { register } from "../../api/api_register";
 
 function Register() {
@@ -38,13 +37,13 @@ function Register() {
 			<div className="card bg-primary !text-primary-content md:w-2/3 md:mx-auto p-6 shadow-lg">
 				<div className="card-body">
 					<h2 className="text-center mb-2">{APP_NAME}</h2>
-					<h4 className="text-center">Register as a Volunteer!</h4>
+					<h4 className="text-center">Register now</h4>
 					<form onSubmit={handleSubmit}>
 						<fieldset className="fieldset border-1 rounded-box p-4">
 							<legend className="fieldset-legend">User Credentials</legend>
 							<label>Username</label>
 							<input
-								className="input input-primary"
+								className="input input-primary w-full"
 								type="text"
 								name="username"
 								value={formData.username}
@@ -53,7 +52,7 @@ function Register() {
 							/>
 							<label>Email</label>
 							<input
-								className="input input-primary"
+								className="input input-primary w-full"
 								type="email"
 								placeholder="e.g. johndoe@gmail.com"
 								name="email"
@@ -63,7 +62,7 @@ function Register() {
 							/>
 							<label>Password</label>
 							<input
-								className="input input-primary"
+								className="input input-primary w-full"
 								type="password"
 								placeholder="••••••••••••"
 								name="password"
@@ -73,7 +72,7 @@ function Register() {
 							/>
 							<label>Confirm Password</label>
 							<input
-								className="input input-primary"
+								className="input input-primary w-full"
 								type="password"
 								placeholder="••••••••••••"
 								name="confirmPassword"
@@ -86,7 +85,7 @@ function Register() {
 							<legend className="fieldset-legend">Personal Information</legend>
 							<label>Firstname</label>
 							<input
-								className="input input-primary"
+								className="input input-primary w-full"
 								type="text"
 								placeholder="e.g. John"
 								name="firstname"
@@ -96,7 +95,7 @@ function Register() {
 							/>
 							<label>Lastname</label>
 							<input
-								className="input input-primary"
+								className="input input-primary w-full"
 								type="text"
 								placeholder="e.g. Doe"
 								name="lastname"
