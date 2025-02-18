@@ -1,12 +1,14 @@
 import { useState } from "react";
 import { APP_NAME } from "../constants/constants";
 import { login } from "../../api/api_login";
+import { useNavigate } from "react-router-dom";
 
 function Login() {
 	const [formData, setFormData] = useState({
 		username: "",
 		password: "",
 	});
+	const navigate = useNavigate();
 
 	const handleChange = (e) => {
 		const { name, value } = e.target;
@@ -19,8 +21,9 @@ function Login() {
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 		console.log("Login submitted:", formData);
-		const response = await login(formData);
-		console.log(response);
+		if (await login(formData)) {
+			navigate("/dashboard");
+		}
 	};
 
 	return (

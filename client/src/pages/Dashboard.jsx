@@ -6,12 +6,19 @@ import artwork4 from '../assets/images/artworks/artwork4.jpg';
 import artwork5 from '../assets/images/artworks/artwork5.jpg';
 import artwork6 from '../assets/images/artworks/artwork6.jpg';
 import { USER_DETAILS, USER_ARTWORKS } from "../constants/constants";
+import { getInformationData } from "../data_management/data_information";
 
 const user = USER_DETAILS[0];
 const artwork_urls = [
-  artwork1, artwork2, artwork3, artwork4, artwork5, artwork6
+	artwork1,
+	artwork2,
+	artwork3,
+	artwork4,
+	artwork5,
+	artwork6,
 ];
-
+const data = getInformationData();
+console.log("DashboardData: " + data.name);
 function Dashboard() {
   return (
     <div>
