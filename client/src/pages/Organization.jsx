@@ -34,14 +34,17 @@ function Organization() {
 					Create
 				</button>
 			</div>
-			<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-				{organizations.map((org) => (
-					<div key={org._id} className="card bg-gray-100 p-4 rounded shadow">
-						<h3 className="text-lg font-semibold">{org.orgName}</h3>
-						<p className="text-sm text-gray-700">{org.description}</p>
-					</div>
-				))}
+			<div className="grid gap-4">
+        {organizations.map((org) => (
+          <div key={org._id} className="card bg-gray-100 min-h-40 p-4 rounded shadow-xl border-none justify-between">
+            <h3 className="text-lg font-semibold">{org.orgName}</h3>
+            <p className="text-sm text-gray-700">{org.description}</p>
+			<div className="card-actions justify-end">
+				<button className="btn btn-primary">Join</button>
 			</div>
+          </div>
+        ))}
+      </div>
 			{viewModal && (
 				<>
 					<CreateModal type="Organization" onClose={handleHideModal} />

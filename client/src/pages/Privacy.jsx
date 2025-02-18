@@ -4,7 +4,7 @@ function Privacy() {
       <div className="grid md:grid-cols-2 grid-cols-auto gap-4">
         <div className="mb-12">
           <h2 className="mb-4">Privacy Policy</h2>
-          <div className="card bg-base-300 my-2 mb-12">
+          <div className="card bg-primary border-none my-2 mb-12">
             <div className="card-body">
               <h6 className="mb-2">Last updated: February 16, 2025</h6>
               <p>
@@ -20,7 +20,7 @@ function Privacy() {
             </div>
           </div>
           <h2 className="mb-4">Interpretation and Definitions</h2>
-          <div className="card bg-base-300 my-2">
+          <div className="card bg-primary border-none my-2">
             <div className="card-body">
               <h3 className="card-title">Interpretation</h3>
               <p>
@@ -31,7 +31,7 @@ function Privacy() {
               </p>
             </div>
           </div>
-          <div className="card bg-base-300 my-2">
+          <div className="card bg-primary border-none my-2">
             <div className="card-body">
               <h3 className="card-title">Definitions</h3>
               <p>For the purposes of this Privacy Policy:</p>
@@ -101,13 +101,6 @@ function Privacy() {
                   example, the duration of a page visit).
                 </li>
                 <li>
-                  <span className="font-bold">Website</span> refers to Artify,
-                  accessible from{" "}
-                  <a className="a-default" href="https://www.arti.fy">
-                    https://www.arti.fy
-                  </a>
-                </li>
-                <li>
                   <span className="font-bold">You</span> means the individual
                   accessing or using the Service, or the company, or other legal
                   entity on behalf of which such individual is accessing or
@@ -122,7 +115,7 @@ function Privacy() {
             Collecting and Using Your Personal Data
           </h2>
           <h2>Types of Data Collected</h2>
-          <div className="card bg-base-300 my-2">
+          <div className="card bg-primary border-none my-2">
             <div className="card-body">
               <h3 className="card-title">Personal Data</h3>
               <p>
@@ -140,7 +133,7 @@ function Privacy() {
               </ul>
             </div>
           </div>
-          <div className="card bg-base-300 my-2">
+          <div className="card bg-primary border-none my-2">
             <div className="card-body">
               <h2>Usage Data</h2>
               <p className="!indent-0">

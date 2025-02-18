@@ -41,7 +41,7 @@ function Home() {
       {/* About Section - User scrolls here on click */}
       <div
         ref={aboutRef}
-        className="min-h-screen flex flex-col items-center justify-center p-12"
+        className="h-screen flex flex-col w-full items-center justify-center p-12"
       >
         <h2 className="text-3xl font-bold">How It Works</h2>
         <p className="mt-4 max-w-2xl text-center">
@@ -53,15 +53,25 @@ function Home() {
       {/* Mission Section */}
       <div
         ref={missionRef}
-        className="min-h-screen flex flex-col items-center justify-center p-12 bg-primary text-white"
+        className="hero h-screen w-full text-center"
+        style={{
+          backgroundImage: `url(${volunteerism})`,
+          backgroundAttachment: "fixed",
+        }}
       >
-        <h2 className="text-3xl font-bold">Our Mission</h2>
-        <p className="mt-4 max-w-2xl text-center">
-          At {APP_NAME}, we believe in the power of community and the ability of
-          volunteers to make meaningful change. Our mission is to provide the
-          tools and platform for people to organize, collaborate, and build
-          lasting relationships that will lead to impactful social change.
-        </p>
+        <div className="hero-overlay"></div>
+
+        <div className="hero-content max-w-md p-6 text-center text-neutral-100">
+          <div className="max-w-md">
+            <h2 className="text-3xl font-bold">Our Mission</h2>
+            <p className="mt-4 max-w-2xl text-center">
+              At {APP_NAME}, we believe in the power of community and the ability of
+              volunteers to make meaningful change. Our mission is to provide the
+              tools and platform for people to organize, collaborate, and build
+              lasting relationships that will lead to impactful social change.
+            </p>
+          </div>
+        </div>
       </div>
       {/* Community Section */}
       <div
