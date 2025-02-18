@@ -24,7 +24,6 @@ router.post("/", async (req, res) => {
 			lastname,
 			email,
 			address,
-			organization,
 			role: "Volunteer",
 		});
 		console.log(newUser);
