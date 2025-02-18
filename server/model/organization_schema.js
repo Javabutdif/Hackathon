@@ -15,7 +15,7 @@ const orgSchema = new Schema({
 		type: String,
 		required: true,
 	},
-	members: [User.Schema],
+
 	date: {
 		type: Date,
 	},

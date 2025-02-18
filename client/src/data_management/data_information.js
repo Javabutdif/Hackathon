@@ -3,9 +3,7 @@ let role;
 
 export const setInformationData = (data) => {
 	console.log(data.name);
-	user = {
-		name: data?.name,
-	};
+    user = data.name;
 	role = data?.role;
 };
 
